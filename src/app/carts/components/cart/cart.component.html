@@ -23,7 +23,7 @@
                 <td>
                     <div class="quantity">
                         <button class="btn btn-dark" (click)="setQuantityPlus(i)">+</button>
-                        <input class="form-control" type="number" [(ngModel)] = item.quantity min="1">
+                        <input class="form-control" type="number" (change)="detectChange()" [(ngModel)] = item.quantity min="1">
                         <button class="btn btn-dark" (click)="setQuantityMinus(i)">-</button>
                     </div>
                 </td>

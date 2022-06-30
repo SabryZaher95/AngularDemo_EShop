@@ -38,6 +38,10 @@ export class CartComponent implements OnInit {
     localStorage.setItem("cart", JSON.stringify(this.cardProducts));
   }
 
+  detectChange(){
+    localStorage.setItem("cart", JSON.stringify(this.cardProducts));
+  }
+
   getCartTotal(){
     this.total = 0; 
     for(let i in this.cardProducts){
