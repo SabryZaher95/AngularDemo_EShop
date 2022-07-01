@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../../models/product';
 import { ProductsService } from '../../services/products.service';
 
 @Component({
@@ -8,8 +9,8 @@ import { ProductsService } from '../../services/products.service';
 })
 export class AllProductsComponent implements OnInit {
 
-  products: any[] = [];
-  categories: any[] = [];
+  products: Product[] = [];
+  categories: string[] = [];
   loading: boolean = false;
   title: string = 'Categories: ';
   cartProducts: any[] = [];
