@@ -28,7 +28,7 @@
                     </div>
                 </td>
                 <td>{{item.item.price * item.quantity}} L.E</td>
-                <td><button class="btn btn-danger">Delete</button></td>
+                <td><button class="btn btn-danger" (click)="deleteProduct(i)">Delete</button></td>
             </tr>
         </tbody>
         <tfoot>
