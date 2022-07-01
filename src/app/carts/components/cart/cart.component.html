@@ -1,8 +1,8 @@
 <div class="cartBox">
     <h1 class="text-danger">Shopping Cart</h1>
     <div class="headCart">
-        <p class="lead">You have <label class="text-danger">2</label> items in your cart</p>
-        <span class="text-danger card-header">Clear Shopping Cart</span>
+        <p class="lead">You have <label class="text-danger">{{cardProducts.length}}</label> items in your cart</p>
+        <span class="text-danger card-header" (click)="clearCart()">Clear Shopping Cart</span>
     </div>
     <table class="table table-striped">
         <thead>
@@ -38,12 +38,12 @@
                 <th></th>
                 <th></th>
                 <th style="width: 15%"><p>Total: {{total | number}}</p></th>
-                <th><button class="btn btn-success">Order Now</button></th>
+                <th><button class="btn btn-success" (click)="addCart()">Order Now</button></th>
             </tr>
         </tfoot>
     </table>
 </div>
 
-<div class="alert alert-success" role="alert"><strong>Well Done!</strong> Your order is successfully sent</div>
+<div class="alert alert-success" role="alert" *ngIf="success"><strong>Well Done!</strong> Your order is successfully sent</div>
 
 
